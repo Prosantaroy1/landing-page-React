@@ -4,6 +4,8 @@ import logo2 from '../../assets/image/from/airbnb.png'
 import logo3 from '../../assets/image/from/react.png'
 import logo4 from '../../assets/image/from/sky-4.png'
 import Balancer from 'react-wrap-balancer';
+import { motion } from "framer-motion"
+import { SlideUp } from '../../animation/animation';
 
 const SignUp = () => {
     return (
@@ -11,19 +13,31 @@ const SignUp = () => {
             <div className="container grid md:grid-cols-2 grid-cols-1 justify-center gap-56 items-center px-14 md:px-28 font-fontmt mx-auto">
                 {/* title from part*/}
                 <div>
-                    <h3 className="md:text-3xl text-xl md:text-start text-center font-semibold">
+                    <motion.h3
+                        variants={SlideUp(0.2)}
+                        initial='initial'
+                        whileInView={'animate'}
+                        className="md:text-3xl text-xl md:text-start text-center font-semibold">
                         <Balancer>
                             See why the world’s best companies use Qubly to become truly data-driven.
                         </Balancer>
-                    </h3>
-                    <div className="divider py-8">Trusted by</div>
+                    </motion.h3>
+                    <motion.div
+                        variants={SlideUp(0.3)}
+                        initial='initial'
+                        whileInView={'animate'}
+                        className="divider py-8">Trusted by</motion.div>
                     {/* logo */}
-                    <ul className='grid grid-cols-2 items-center md:px-1 px-14 gap-5 space-y-4'>
+                    <motion.ul
+                        variants={SlideUp(0.5)}
+                        initial='initial'
+                        whileInView={'animate'}
+                        className='grid grid-cols-2 items-center md:px-1 px-14 gap-5 space-y-4'>
                         <li> <img src={logo1} /> </li>
                         <li> <img src={logo3} /> </li>
                         <li> <img src={logo2} /> </li>
                         <li> <img src={logo4} /> </li>
-                    </ul>
+                    </motion.ul>
                 </div>
                 {/* from part */}
                 <div className='bg-[#e0eaf5]  relative h-[550px] rounded p-6'>

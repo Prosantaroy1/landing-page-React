@@ -10,7 +10,7 @@ function App() {
 
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Hero/>
       <QublySec/>
       <ProductTeam/>
@@ -18,7 +18,7 @@ function App() {
       <Testimonial/>
       <SignUp/>
       <Footer/>
-    </>
+    </div>
   )
 }
 

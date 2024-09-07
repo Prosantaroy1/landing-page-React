@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { motion } from "framer-motion"
 import './hero.css'
+import { SlideUp } from '../../animation/animation';
 
 const Hero = () => {
     // reponsive state
@@ -63,31 +64,51 @@ const Hero = () => {
                 <section className='py-32 grid grid-cols-1 md:gap-1 gap-8 md:grid-cols-2 items-center md:px-2 px-7  justify-between font-fontmt'>
                     {/* banner left title */}
                     <div className='flex md:items-start items-center flex-col'>
-                        <p className='flex items-center  text-purple text-xl  gap-2'>
+                        <motion.p 
+                        variants={SlideUp(0.1)}
+                        initial='initial'
+                        animate='animate'
+                        className='flex items-center  text-purple text-xl  gap-2'>
                             <BsStars />v3.1 released. Learn more
-                        </p>
+                        </motion.p>
                         {/* title */}
-                        <h3 className='md:text-6xl text-3xl pt-6 md:text-start text-center font-bold'>
+                        <motion.h3
+                        variants={SlideUp(0.2)}
+                        initial='initial'
+                        animate='animate'
+                        className='md:text-6xl text-3xl pt-6 md:text-start text-center font-bold'>
                             <Balancer>
                                 Your data with<br /> real-time analytics
                             </Balancer>
-                        </h3>
+                        </motion.h3>
                         {/* para */}
-                        <p className='md:texl-2xl py-5  md:text-start text-center font-normal'>
+                        <motion.p
+                        variants={SlideUp(0.5)}
+                        initial='initial'
+                        animate='animate'
+                        className='md:texl-2xl py-5  md:text-start text-center font-normal'>
                             <Balancer>
                                 Harness the potential of Big Data Analytics & Cloud Services<br />
                                 and become a data-driven organization with Needle tail
                             </Balancer>
-                        </p>
+                        </motion.p>
                         {/* btn */}
-                        <div className='flex  flex-col md:flex-row items-center gap-5'>
+                        <motion.div 
+                        variants={SlideUp(0.8)}
+                        initial='initial'
+                        animate='animate'
+                        className='flex  flex-col md:flex-row items-center gap-5'>
                             <button className='border-2 text-2xl border-purple hover:bg-[#fff] hover:text-[#000] bg-purple rounded-full text-[#fff] px-5 py-3'>Start free trial</button>
                             <button className='border-2 text-2xl hover:bg-purple hover:text-[#ffff] border-purple rounded-full  px-5 py-3'>Learn more</button>
-                        </div>
+                        </motion.div>
                     </div>
                     {/* banner img */}
                     <div>
-                        <img src={banner} alt="" className='w-full' />
+                        <motion.img
+                        initial={{x:50, opacity:0}}
+                        animate={{x:0, opacity:1}}
+                        transition={{duration: 0.5, delay: 0.3}}
+                         src={banner} alt="" className='w-full' />
                     </div>
                 </section>
             </div>
