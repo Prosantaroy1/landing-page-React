@@ -6,6 +6,7 @@ import Balancer from 'react-wrap-balancer';
 import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
+import { motion } from "framer-motion"
 
 const Hero = () => {
     // reponsive state
@@ -15,7 +16,11 @@ const Hero = () => {
         <div className='bg-[#e5e7ee] md:px-1 px-3'>
             <div className="container  mx-auto ">
                 {/* navber open*/}
-                <nav className='flex relative justify-between items-center pt-8'>
+                <motion.nav
+                    initial={{ y: -100 }}
+                    animate={{ y: 0 }}
+                    transition={{duration: 0.3}}
+                    className='flex relative justify-between items-center pt-8'>
                     {/* logo */}
                     <div>
                         <img src={logo} alt="" />
@@ -52,7 +57,7 @@ const Hero = () => {
                             </ul>
                         </div>
                     }
-                </nav>
+                </motion.nav>
                 {/* banner open */}
                 <section className='py-32 grid grid-cols-1 md:gap-1 gap-8 md:grid-cols-2 items-center md:px-2 px-7  justify-between font-fontmt'>
                     {/* banner left title */}
