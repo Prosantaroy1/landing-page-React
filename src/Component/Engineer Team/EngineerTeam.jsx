@@ -4,7 +4,7 @@ import Balancer from 'react-wrap-balancer';
 const EngineerTeam = () => {
     return (
         <div className='py-28'>
-            <div className="container flex md:flex-row flex-col flex-col-reverse items-center justify-center gap-4  mx-auto">
+            <div className="container flex md:flex-row  flex-col-reverse items-center justify-center gap-4  mx-auto">
                 {/* engineer title */}
                 <div className='space-y-7 flex flex-col md:items-start items-center justify-center'>
                     <button className="flex items-center font-medium gap-2 text-purple rounded-full bg-[#d9e3fc] p-1 text-xl">

@@ -7,19 +7,20 @@ import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 import { motion } from "framer-motion"
+import './hero.css'
 
 const Hero = () => {
     // reponsive state
     const [open, setOpen] = useState(false);
 
     return (
-        <div className='bg-[#e5e7ee] md:px-1 px-3'>
+        <div className='bg-[#e5e7ee]m hero-banner md:px-1 px-3'>
             <div className="container  mx-auto ">
                 {/* navber open*/}
                 <motion.nav
                     initial={{ y: -100 }}
                     animate={{ y: 0 }}
-                    transition={{duration: 0.3}}
+                    transition={{duration: 0.5}}
                     className='flex relative justify-between items-center pt-8'>
                     {/* logo */}
                     <div>
@@ -66,20 +67,20 @@ const Hero = () => {
                             <BsStars />v3.1 released. Learn more
                         </p>
                         {/* title */}
-                        <h3 className='text-6xl pt-6 md:text-start text-center font-bold'>
+                        <h3 className='md:text-6xl text-3xl pt-6 md:text-start text-center font-bold'>
                             <Balancer>
                                 Your data with<br /> real-time analytics
                             </Balancer>
                         </h3>
                         {/* para */}
-                        <p className='texl-2xl py-5  md:text-start text-center font-normal'>
+                        <p className='md:texl-2xl py-5  md:text-start text-center font-normal'>
                             <Balancer>
                                 Harness the potential of Big Data Analytics & Cloud Services<br />
                                 and become a data-driven organization with Needle tail
                             </Balancer>
                         </p>
                         {/* btn */}
-                        <div className='flex items-center gap-5'>
+                        <div className='flex  flex-col md:flex-row items-center gap-5'>
                             <button className='border-2 text-2xl border-purple hover:bg-[#fff] hover:text-[#000] bg-purple rounded-full text-[#fff] px-5 py-3'>Start free trial</button>
                             <button className='border-2 text-2xl hover:bg-purple hover:text-[#ffff] border-purple rounded-full  px-5 py-3'>Learn more</button>
                         </div>

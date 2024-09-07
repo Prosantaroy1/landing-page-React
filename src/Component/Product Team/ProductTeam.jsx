@@ -19,7 +19,7 @@ const ProductTeam = () => {
                     <button className="flex items-center font-medium gap-2 text-purple rounded-full bg-[#d9e3fc] p-1 text-xl">
                         <LuChefHat className="text-2xl" />For Product Teams
                     </button>
-                    <h3 className='text-4xl font-bold'>
+                    <h3 className='text-4xl text-center md:text-start font-bold'>
                         <Balancer>
                             Launch with the best stack
                         </Balancer>
